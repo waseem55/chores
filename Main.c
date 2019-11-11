@@ -97,6 +97,7 @@ void main()
             rand = (random()%10);
             text = &chores[rand % NUMBER_OF_CHORES][0];
             user = rand%2;
+            btn_pressed = 0;
         }
         __delay_ms(1000);
 
@@ -112,12 +113,11 @@ void __interrupt() testing(void)
         {
             lcd_cmd(0x0c);      // Turn LCD on
             lcd_clear_all();
+            __delay_ms(50);     // Simple debounce
             lcd_off = 0;
         }
         else
             btn_pressed = 1;
-        lcd_print(text, space_pos, 0, 0);
-        lcd_print(user, 6, 1, 0);
         TMR0 = 0;
         TMR1 = 0;
         INT0IF = 0;

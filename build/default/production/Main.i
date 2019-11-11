@@ -1572,7 +1572,8 @@ void lcd_clear_line(unsigned char line);
 
 
 int rand = 0;
-int space_pos;
+int space_pos = 16;
+unsigned char btn_pressed = 0;
 unsigned char lcd_off = 0;
 unsigned char user = 0;
 unsigned char lastrb = 0;
@@ -1614,14 +1615,25 @@ void main()
 
     while (1){
         lcd_clear_all();
-
+        if (strlen(text) > 16)
+            {
+                for (space_pos = 16; text[space_pos] != ' ' && space_pos != 0; space_pos--);
+                long_text = 1;
+            }
         lcd_print(text, space_pos, 0, 0);
         lcd_print(&users[user][0], 6, 1, 0);
         if (strlen(text) > 16)
         {
-            _delay((unsigned long)((500)*(31000/4000.0)));
+            _delay((unsigned long)((300)*(31000/4000.0)));
             lcd_clear_line(0);
             lcd_print(text+space_pos+1, 16, 0, 0);
+        }
+        if (btn_pressed)
+        {
+            rand = (random()%10);
+            text = &chores[rand % 11][0];
+            user = rand%2;
+            btn_pressed = 0;
         }
         _delay((unsigned long)((1000)*(31000/4000.0)));
 
@@ -1633,27 +1645,15 @@ void __attribute__((picinterrupt(("")))) testing(void)
 {
     if (INT0IF == 1)
     {
-        _delay((unsigned long)((5)*(31000/4000.0)));
         if (lcd_off)
         {
             lcd_cmd(0x0c);
             lcd_clear_all();
+            _delay((unsigned long)((50)*(31000/4000.0)));
             lcd_off = 0;
         }
         else
-        {
-            space_pos = 16;
-            rand = (random()%10);
-            text = &chores[rand % 11][0];
-            user = rand%2;
-            if (strlen(text) > 16)
-            {
-                for (space_pos = 16; text[space_pos] != ' ' && space_pos != 0; space_pos--);
-                long_text = 1;
-            }
-        }
-        lcd_print(text, space_pos, 0, 0);
-        lcd_print(user, 6, 1, 0);
+            btn_pressed = 1;
         TMR0 = 0;
         TMR1 = 0;
         INT0IF = 0;
