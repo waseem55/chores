@@ -21,13 +21,11 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "13 D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 [v _lcd_print lcd_print `(v  1 e 1 0 ]
-[v i1_lcd_print lcd_print `(v  1 e 1 0 ]
 "27
 [v _lcd_clear_all lcd_clear_all `(v  1 e 1 0 ]
 [v i1_lcd_clear_all lcd_clear_all `(v  1 e 1 0 ]
 "33
 [v _lcd_clear_line lcd_clear_line `(v  1 e 1 0 ]
-[v i1_lcd_clear_line lcd_clear_line `(v  1 e 1 0 ]
 "44
 [v _lcd_init lcd_init `(v  1 e 1 0 ]
 "74
@@ -35,17 +33,16 @@
 [v i1_lcd_cmd lcd_cmd `(v  1 e 1 0 ]
 "90
 [v _lcd_data lcd_data `(v  1 e 1 0 ]
-[v i1_lcd_data lcd_data `(v  1 e 1 0 ]
 "106
 [v _enable enable `(v  1 e 1 0 ]
 [v i1_enable enable `(v  1 e 1 0 ]
-"56 D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+"57 D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 [v _main main `(v  1 e 1 0 ]
-"108
+"137
 [v _testing testing `II(v  1 e 1 0 ]
-"161
+"184
 [v _random random `(uc  1 e 1 0 ]
-"189
+"215
 [v _strlen strlen `(uc  1 e 1 0 ]
 "59 D:/Microchip/xc8/v2.05/pic/include\pic16f88.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -90,58 +87,60 @@
 "39
 [v _space_pos space_pos `i  1 e 2 0 ]
 "40
-[v _btn_pressed btn_pressed `uc  1 e 1 0 ]
+[v _print print `uc  1 e 1 0 ]
 "41
-[v _lcd_off lcd_off `uc  1 e 1 0 ]
+[v _btn_pressed btn_pressed `uc  1 e 1 0 ]
 "42
+[v _asleep asleep `uc  1 e 1 0 ]
+"43
 [v _user user `uc  1 e 1 0 ]
-"44
-[v _users users `DC[2][7]uc  1 e 14 0 ]
 "45
+[v _users users `DC[2][7]uc  1 e 14 0 ]
+"46
 [v _chores chores `DC[11][30]uc  1 e 330 0 ]
-"49
-[v _text text `*.25uc  1 e 2 0 ]
 "50
+[v _text text `*.25uc  1 e 2 0 ]
+"51
 [v _long_text long_text `uc  1 e 1 0 ]
-"56
+"57
 [v _main main `(v  1 e 1 0 ]
 {
-"106
+"135
 } 0
-"189
+"215
 [v _strlen strlen `(uc  1 e 1 0 ]
 {
-"191
-[v strlen@i i `i  1 a 2 9 ]
-"192
-[v strlen@result result `uc  1 a 1 11 ]
-"189
-[v strlen@string string `*.25uc  1 p 2 6 ]
-"199
+"217
+[v strlen@i i `i  1 a 2 3 ]
+"218
+[v strlen@result result `uc  1 a 1 5 ]
+"215
+[v strlen@string string `*.25uc  1 p 2 0 ]
+"225
 } 0
-"161
+"184
 [v _random random `(uc  1 e 1 0 ]
 {
-"165
-[v random@original original `uc  1 a 1 8 ]
-"166
-[v random@rbit rbit `uc  1 a 1 7 ]
-"163
+"188
+[v random@original original `uc  1 a 1 2 ]
+"189
+[v random@rbit rbit `uc  1 a 1 1 ]
+"186
 [v random@rand rand `uc  1 s 1 rand ]
-"164
-[v random@count count `uc  1 s 1 count ]
 "187
+[v random@count count `uc  1 s 1 count ]
+"213
 } 0
 "13 D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 [v _lcd_print lcd_print `(v  1 e 1 0 ]
 {
 "18
-[v lcd_print@pointer pointer `*.25uc  1 a 2 16 ]
+[v lcd_print@pointer pointer `*.25uc  1 a 2 10 ]
 "13
-[v lcd_print@text text `*.25uc  1 p 2 10 ]
-[v lcd_print@size size `uc  1 p 1 12 ]
-[v lcd_print@line line `uc  1 p 1 13 ]
-[v lcd_print@pos pos `uc  1 p 1 14 ]
+[v lcd_print@text text `*.25uc  1 p 2 4 ]
+[v lcd_print@size size `uc  1 p 1 6 ]
+[v lcd_print@line line `uc  1 p 1 7 ]
+[v lcd_print@pos pos `uc  1 p 1 8 ]
 "25
 } 0
 "44
@@ -154,11 +153,11 @@
 {
 [v lcd_clear_line@line line `uc  1 a 1 wreg ]
 "35
-[v lcd_clear_line@i i `i  1 a 2 12 ]
+[v lcd_clear_line@i i `i  1 a 2 6 ]
 "33
 [v lcd_clear_line@line line `uc  1 a 1 wreg ]
 "36
-[v lcd_clear_line@line line `uc  1 a 1 11 ]
+[v lcd_clear_line@line line `uc  1 a 1 5 ]
 "42
 } 0
 "90
@@ -167,7 +166,7 @@
 [v lcd_data@d d `uc  1 a 1 wreg ]
 [v lcd_data@d d `uc  1 a 1 wreg ]
 "93
-[v lcd_data@d d `uc  1 a 1 9 ]
+[v lcd_data@d d `uc  1 a 1 3 ]
 "104
 } 0
 "27
@@ -181,7 +180,7 @@
 [v lcd_cmd@c c `uc  1 a 1 wreg ]
 [v lcd_cmd@c c `uc  1 a 1 wreg ]
 "77
-[v lcd_cmd@c c `uc  1 a 1 9 ]
+[v lcd_cmd@c c `uc  1 a 1 3 ]
 "88
 } 0
 "106
@@ -193,10 +192,10 @@
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "17
-[v ___wmul@product product `ui  1 a 2 20 ]
+[v ___wmul@product product `ui  1 a 2 14 ]
 "15
-[v ___wmul@multiplier multiplier `ui  1 p 2 16 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 18 ]
+[v ___wmul@multiplier multiplier `ui  1 p 2 10 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 12 ]
 "53
 } 0
 "4 D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
@@ -204,60 +203,31 @@
 {
 [v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
 "6
-[v ___bmul@product product `uc  1 a 1 8 ]
+[v ___bmul@product product `uc  1 a 1 2 ]
 "4
 [v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
-[v ___bmul@multiplicand multiplicand `uc  1 p 1 6 ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
 "6
-[v ___bmul@multiplier multiplier `uc  1 a 1 9 ]
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
 "51
 } 0
 "5 D:\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v ___awmod@sign sign `uc  1 a 1 15 ]
-[v ___awmod@counter counter `uc  1 a 1 14 ]
+[v ___awmod@sign sign `uc  1 a 1 9 ]
+[v ___awmod@counter counter `uc  1 a 1 8 ]
 "5
-[v ___awmod@divisor divisor `i  1 p 2 9 ]
-[v ___awmod@dividend dividend `i  1 p 2 11 ]
+[v ___awmod@divisor divisor `i  1 p 2 3 ]
+[v ___awmod@dividend dividend `i  1 p 2 5 ]
 "34
 } 0
-"108 D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+"137 D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 [v _testing testing `II(v  1 e 1 0 ]
 {
-"135
+"158
 } 0
-"13 D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-[v i1_lcd_print lcd_print `(v  1 e 1 0 ]
-{
-[v i1lcd_print@pointer lcd_print `*.25uc  1 a 2 10 ]
-[v i1lcd_print@text text `*.25uc  1 p 2 4 ]
-[v i1lcd_print@size size `uc  1 p 1 6 ]
-[v i1lcd_print@line line `uc  1 p 1 7 ]
-[v i1lcd_print@pos pos `uc  1 p 1 8 ]
-"25
-} 0
-"33
-[v i1_lcd_clear_line lcd_clear_line `(v  1 e 1 0 ]
-{
-[v i1lcd_clear_line@line line `uc  1 a 1 wreg ]
-[v i1lcd_clear_line@i lcd_clear_line `i  1 a 2 6 ]
-[v i1lcd_clear_line@line line `uc  1 a 1 wreg ]
-"36
-[v i1lcd_clear_line@line line `uc  1 a 1 5 ]
-"42
-} 0
-"90
-[v i1_lcd_data lcd_data `(v  1 e 1 0 ]
-{
-[v i1lcd_data@d d `uc  1 a 1 wreg ]
-[v i1lcd_data@d d `uc  1 a 1 wreg ]
-"93
-[v i1lcd_data@d d `uc  1 a 1 3 ]
-"104
-} 0
-"27
+"27 D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 [v i1_lcd_clear_all lcd_clear_all `(v  1 e 1 0 ]
 {
 "31

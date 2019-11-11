@@ -1573,19 +1573,20 @@ void lcd_clear_line(unsigned char line);
 
 int rand = 0;
 int space_pos = 16;
+unsigned char print = 1;
 unsigned char btn_pressed = 0;
-unsigned char lcd_off = 0;
+unsigned char asleep = 0;
 unsigned char user = 0;
 unsigned char lastrb = 0;
-const char users[2][7] = {"Waseem","Hiba"};
-const char chores[11][30] = {"Vacuum","Clean bathroom","Mop floor","Wash bed sheets",
-"Wash curtains","Dusting","Clean microwave","Scrub doors and cabinets",
-"Organize closet","Clean under sinks","Clean fridge"};
+const char users[2][7] = {"Waseem", "Hiba"};
+const char chores[11][30] = {"Vacuum", "Clean bathroom", "Mop floor", "Wash bed sheets",
+    "Wash curtains", "Dusting", "Clean microwave", "Scrub doors and cabinets",
+    "Organize closet", "Clean under sinks", "Clean fridge"};
 
 unsigned char *text;
-unsigned char long_text;
+unsigned char long_text = 0;
 unsigned char scores[] = {0, 0};
-char* itoa (int x);
+char* itoa(int x);
 char random(void);
 unsigned char strlen(unsigned char string[]);
 
@@ -1610,30 +1611,58 @@ void main()
 
     lcd_init();
 
-    rand = (random()%10);
+    rand = (random() % 10);
     text = &chores[rand % 11][0];
+    if (strlen(text) > 16)
+    {
+        for (space_pos = 16; text[space_pos] != ' ' && space_pos != 0; space_pos--);
+        long_text = 1;
+    }
 
-    while (1){
-        lcd_clear_all();
-        if (strlen(text) > 16)
+    while (1)
+    {
+        if (asleep)
+        {
+            lcd_clear_all();
+            lcd_print("sleep time!", 16, 0, 0);
+            _delay((unsigned long)((500)*(31000/4000.0)));
+            lcd_cmd(0x08);
+            btn_pressed = 0;
+            __asm("sleep");
+            print = 1;
+        }
+        else if (btn_pressed)
+        {
+            print = 1;
+            rand = (random() % 10);
+            text = &chores[rand % 11][0];
+            user = rand % 2;
+            if (strlen(text) > 16)
             {
                 for (space_pos = 16; text[space_pos] != ' ' && space_pos != 0; space_pos--);
                 long_text = 1;
             }
-        lcd_print(text, space_pos, 0, 0);
-        lcd_print(&users[user][0], 6, 1, 0);
-        if (strlen(text) > 16)
+            else
+            {
+                long_text = 0;
+                space_pos = 16;
+            }
+            btn_pressed = 0;
+        }
+        if (print)
         {
+            lcd_clear_all();
+            print = 0;
+            lcd_print(text, space_pos, 0, 0);
+            lcd_print(&users[user][0], 6, 1, 0);
+        }
+        if (long_text)
+        {
+            lcd_print(text, space_pos, 0, 0);
             _delay((unsigned long)((300)*(31000/4000.0)));
             lcd_clear_line(0);
-            lcd_print(text+space_pos+1, 16, 0, 0);
-        }
-        if (btn_pressed)
-        {
-            rand = (random()%10);
-            text = &chores[rand % 11][0];
-            user = rand%2;
-            btn_pressed = 0;
+            lcd_print(text + space_pos + 1, 16, 0, 0);
+            _delay((unsigned long)((500)*(31000/4000.0)));
         }
         _delay((unsigned long)((1000)*(31000/4000.0)));
 
@@ -1645,12 +1674,11 @@ void __attribute__((picinterrupt(("")))) testing(void)
 {
     if (INT0IF == 1)
     {
-        if (lcd_off)
+        if (asleep)
         {
             lcd_cmd(0x0c);
             lcd_clear_all();
-            _delay((unsigned long)((50)*(31000/4000.0)));
-            lcd_off = 0;
+            asleep = 0;
         }
         else
             btn_pressed = 1;
@@ -1660,39 +1688,34 @@ void __attribute__((picinterrupt(("")))) testing(void)
     }
     else if (TMR0IF)
     {
-        lcd_off = 1;
-        lcd_clear_line(0);
-        lcd_print("sleep time!", 16, 0, 0);
-        _delay((unsigned long)((500)*(31000/4000.0)));
-        lcd_cmd(0x08);
+        asleep = 1;
         TMR0IF = 0;
-        __asm("sleep");
     }
 }
 
-
-char* itoa (int x)
+char* itoa(int x)
 {
     int original = x;
     char buffer[8];
 
-    int c = sizeof(buffer)-1;
+    int c = sizeof (buffer) - 1;
 
     buffer[c] = 0;
 
     if (x < 0)
         x = -x;
 
-    do{
-        buffer[--c] = (x%10) + '0';
+    do
+    {
+        buffer[--c] = (x % 10) + '0';
         x /= 10;
-    }while (x);
+    }
+    while (x);
 
     if (original < 0)
         buffer[--c] = '-';
     return &buffer[c];
 }
-
 
 char random(void)
 {
@@ -1701,8 +1724,10 @@ char random(void)
     char original = rand;
     char rbit = 0;
 
-    if (count == 0){
-        while (RA7 == 0){
+    if (count == 0)
+    {
+        while (RA7 == 0)
+        {
         }
         count = 1;
         rand = TMR0;
@@ -1712,17 +1737,18 @@ char random(void)
     }
 
     original &= 180;
-    while(original){
+    while (original)
+    {
         rbit ^= (original & 1);
         original >>= 1;
-        original &= (~(1<<7));
+        original &= (~(1 << 7));
     }
     rand <<= 1;
     rand |= rbit;
     return rand;
 }
 
-unsigned char strlen( unsigned char string[])
+unsigned char strlen(unsigned char string[])
 {
     int i = 0;
     unsigned char result = 0;
