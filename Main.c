@@ -36,7 +36,8 @@
 
 #define NUMBER_OF_CHORES 11
 int rand = 0;
-int space_pos;
+int space_pos = 16;
+unsigned char btn_pressed = 0;
 unsigned char lcd_off = 0;
 unsigned char user = 0;
 unsigned char lastrb = 0;
@@ -78,14 +79,24 @@ void main()
     
     while (1){
         lcd_clear_all();
-        
+        if (strlen(text) > 16)
+            {
+                for (space_pos = 16; text[space_pos] != ' ' && space_pos != 0; space_pos--);
+                long_text = 1;
+            }
         lcd_print(text, space_pos, 0, 0);
         lcd_print(&users[user][0], 6, 1, 0);
         if (strlen(text) > 16)
         {
-            __delay_ms(500);
+            __delay_ms(300);
             lcd_clear_line(0);
             lcd_print(text+space_pos+1, 16, 0, 0);
+        }
+        if (btn_pressed)
+        {
+            rand = (random()%10);
+            text = &chores[rand % NUMBER_OF_CHORES][0];
+            user = rand%2;
         }
         __delay_ms(1000);
 
@@ -97,7 +108,6 @@ void __interrupt() testing(void)
 {
     if (INT0IF == 1)
     {
-        __delay_ms(5);
         if (lcd_off)
         {
             lcd_cmd(0x0c);      // Turn LCD on
@@ -105,17 +115,7 @@ void __interrupt() testing(void)
             lcd_off = 0;
         }
         else
-        {
-            space_pos = 16;
-            rand = (random()%10);
-            text = &chores[rand % NUMBER_OF_CHORES][0];
-            user = rand%2;
-            if (strlen(text) > 16)
-            {
-                for (space_pos = 16; text[space_pos] != ' ' && space_pos != 0; space_pos--);
-                long_text = 1;
-            }
-        }
+            btn_pressed = 1;
         lcd_print(text, space_pos, 0, 0);
         lcd_print(user, 6, 1, 0);
         TMR0 = 0;
