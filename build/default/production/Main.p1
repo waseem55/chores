@@ -12,6 +12,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "228
 [; ;../../../../Microchip/xc8/v2.05/pic/include\pic16f88.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
 [v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"2422
+[; ;../../../../Microchip/xc8/v2.05/pic/include\pic16f88.h: 2422: extern volatile __bit RB3 __attribute__((address(0x33)));
+[v _RB3 `Vb ~T0 @X0 0 e@51 ]
 "2335
 [; ;../../../../Microchip/xc8/v2.05/pic/include\pic16f88.h: 2335: extern volatile __bit INT0IF __attribute__((address(0x59)));
 [v _INT0IF `Vb ~T0 @X0 0 e@89 ]
@@ -554,6 +557,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "62
 [; ;Main.c: 62:     PORTB = 0x00;
 [e = _PORTB -> -> 0 `i `uc ]
+"63
+[; ;Main.c: 63:     RB3 = 1;
+[e = _RB3 -> -> 1 `i `b ]
 "64
 [; ;Main.c: 64:     INT0IF = 0;
 [e = _INT0IF -> -> 0 `i `b ]
@@ -642,42 +648,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Main.c: 94:             btn_pressed = 0;
 [e = _btn_pressed -> -> 0 `i `uc ]
 "95
-[; ;Main.c: 95:             __asm("sleep");
-[; <" sleep ;# ">
+[; ;Main.c: 95:             RB3 = 0;
+[e = _RB3 -> -> 0 `i `b ]
 "96
-[; ;Main.c: 96:             print = 1;
-[e = _print -> -> 1 `i `uc ]
+[; ;Main.c: 96:             __asm("sleep");
+[; <" sleep ;# ">
 "97
-[; ;Main.c: 97:         }
+[; ;Main.c: 97:             print = 1;
+[e = _print -> -> 1 `i `uc ]
+"98
+[; ;Main.c: 98:         }
 }
 [e $U 98  ]
-"98
-[; ;Main.c: 98:         else if (btn_pressed)
+"99
+[; ;Main.c: 99:         else if (btn_pressed)
 [e :U 97 ]
 [e $ ! != -> _btn_pressed `i -> 0 `i 99  ]
-"99
-[; ;Main.c: 99:         {
-{
 "100
-[; ;Main.c: 100:             print = 1;
-[e = _print -> -> 1 `i `uc ]
-"101
-[; ;Main.c: 101:             rand = (random() % 10);
-[e = _rand % -> ( _random ..  `i -> 10 `i ]
-"102
-[; ;Main.c: 102:             text = &chores[rand % 11][0];
-[e = _text -> &U *U + &U *U + &U _chores * -> -> % _rand -> 11 `i `ui `ux -> * -> # *U &U *U &U _chores `ui -> -> 30 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _chores * -> -> % _rand -> 11 `i `ui `ux -> * -> # *U &U *U &U _chores `ui -> -> 30 `i `ui `ux `ui `ux `*uc ]
-"103
-[; ;Main.c: 103:             user = rand % 2;
-[e = _user -> % _rand -> 2 `i `uc ]
-"104
-[; ;Main.c: 104:             if (strlen(text) > 16)
-[e $ ! > -> ( _strlen (1 _text `i -> 16 `i 100  ]
-"105
-[; ;Main.c: 105:             {
+[; ;Main.c: 100:         {
 {
+"101
+[; ;Main.c: 101:             print = 1;
+[e = _print -> -> 1 `i `uc ]
+"102
+[; ;Main.c: 102:             rand = (random() % 10);
+[e = _rand % -> ( _random ..  `i -> 10 `i ]
+"103
+[; ;Main.c: 103:             text = &chores[rand % 11][0];
+[e = _text -> &U *U + &U *U + &U _chores * -> -> % _rand -> 11 `i `ui `ux -> * -> # *U &U *U &U _chores `ui -> -> 30 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _chores * -> -> % _rand -> 11 `i `ui `ux -> * -> # *U &U *U &U _chores `ui -> -> 30 `i `ui `ux `ui `ux `*uc ]
+"104
+[; ;Main.c: 104:             user = rand % 2;
+[e = _user -> % _rand -> 2 `i `uc ]
+"105
+[; ;Main.c: 105:             if (strlen(text) > 16)
+[e $ ! > -> ( _strlen (1 _text `i -> 16 `i 100  ]
 "106
-[; ;Main.c: 106:                 for (space_pos = 16; text[space_pos] != ' ' && space_pos != 0; space_pos--);
+[; ;Main.c: 106:             {
+{
+"107
+[; ;Main.c: 107:                 for (space_pos = 16; text[space_pos] != ' ' && space_pos != 0; space_pos--);
 {
 [e = _space_pos -> 16 `i ]
 [e $U 104  ]
@@ -687,394 +696,397 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ && != -> *U + _text * -> _space_pos `x -> -> # *U _text `i `x `ui -> 32 `ui != _space_pos -> 0 `i 101  ]
 [e :U 102 ]
 }
-"107
-[; ;Main.c: 107:                 long_text = 1;
-[e = _long_text -> -> 1 `i `uc ]
 "108
-[; ;Main.c: 108:             }
+[; ;Main.c: 108:                 long_text = 1;
+[e = _long_text -> -> 1 `i `uc ]
+"109
+[; ;Main.c: 109:             }
 }
 [e $U 105  ]
-"109
-[; ;Main.c: 109:             else
-[e :U 100 ]
 "110
-[; ;Main.c: 110:             {
-{
+[; ;Main.c: 110:             else
+[e :U 100 ]
 "111
-[; ;Main.c: 111:                 long_text = 0;
-[e = _long_text -> -> 0 `i `uc ]
+[; ;Main.c: 111:             {
+{
 "112
-[; ;Main.c: 112:                 space_pos = 16;
-[e = _space_pos -> 16 `i ]
+[; ;Main.c: 112:                 long_text = 0;
+[e = _long_text -> -> 0 `i `uc ]
 "113
-[; ;Main.c: 113:             }
+[; ;Main.c: 113:                 space_pos = 16;
+[e = _space_pos -> 16 `i ]
+"114
+[; ;Main.c: 114:             }
 }
 [e :U 105 ]
-"114
-[; ;Main.c: 114:             btn_pressed = 0;
-[e = _btn_pressed -> -> 0 `i `uc ]
 "115
-[; ;Main.c: 115:         }
+[; ;Main.c: 115:             btn_pressed = 0;
+[e = _btn_pressed -> -> 0 `i `uc ]
+"116
+[; ;Main.c: 116:         }
 }
 [e :U 99 ]
 [e :U 98 ]
-"116
-[; ;Main.c: 116:         if (print)
-[e $ ! != -> _print `i -> 0 `i 106  ]
 "117
-[; ;Main.c: 117:         {
-{
+[; ;Main.c: 117:         if (print)
+[e $ ! != -> _print `i -> 0 `i 106  ]
 "118
-[; ;Main.c: 118:             lcd_clear_all();
-[e ( _lcd_clear_all ..  ]
+[; ;Main.c: 118:         {
+{
 "119
-[; ;Main.c: 119:             print = 0;
-[e = _print -> -> 0 `i `uc ]
+[; ;Main.c: 119:             lcd_clear_all();
+[e ( _lcd_clear_all ..  ]
 "120
-[; ;Main.c: 120:             lcd_print(text, space_pos, 0, 0);
-[e ( _lcd_print (4 , , , _text -> _space_pos `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;Main.c: 120:             print = 0;
+[e = _print -> -> 0 `i `uc ]
 "121
-[; ;Main.c: 121:             lcd_print(&users[user][0], 6, 1, 0);
-[e ( _lcd_print (4 , , , -> &U *U + &U *U + &U _users * -> _user `ux -> * -> # *U &U *U &U _users `ui -> -> 7 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _users * -> _user `ux -> * -> # *U &U *U &U _users `ui -> -> 7 `i `ui `ux `ui `ux `*uc -> -> 6 `i `uc -> -> 1 `i `uc -> -> 0 `i `uc ]
+[; ;Main.c: 121:             lcd_print(text, space_pos, 0, 0);
+[e ( _lcd_print (4 , , , _text -> _space_pos `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
 "122
-[; ;Main.c: 122:         }
+[; ;Main.c: 122:             lcd_print(&users[user][0], 6, 1, 0);
+[e ( _lcd_print (4 , , , -> &U *U + &U *U + &U _users * -> _user `ux -> * -> # *U &U *U &U _users `ui -> -> 7 `i `ui `ux * -> -> -> 0 `i `ui `ux -> -> # *U &U *U + &U _users * -> _user `ux -> * -> # *U &U *U &U _users `ui -> -> 7 `i `ui `ux `ui `ux `*uc -> -> 6 `i `uc -> -> 1 `i `uc -> -> 0 `i `uc ]
+"123
+[; ;Main.c: 123:         }
 }
 [e :U 106 ]
-"123
-[; ;Main.c: 123:         if (long_text)
-[e $ ! != -> _long_text `i -> 0 `i 107  ]
 "124
-[; ;Main.c: 124:         {
-{
+[; ;Main.c: 124:         if (long_text)
+[e $ ! != -> _long_text `i -> 0 `i 107  ]
 "125
-[; ;Main.c: 125:             lcd_print(text, space_pos, 0, 0);
-[e ( _lcd_print (4 , , , _text -> _space_pos `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;Main.c: 125:         {
+{
 "126
-[; ;Main.c: 126:             _delay((unsigned long)((300)*(31000/4000.0)));
-[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 31000 `i `d .4000.0 `ul ]
+[; ;Main.c: 126:             lcd_print(text, space_pos, 0, 0);
+[e ( _lcd_print (4 , , , _text -> _space_pos `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
 "127
-[; ;Main.c: 127:             lcd_clear_line(0);
-[e ( _lcd_clear_line (1 -> -> 0 `i `uc ]
-"128
-[; ;Main.c: 128:             lcd_print(text + space_pos + 1, 16, 0, 0);
-[e ( _lcd_print (4 , , , + + _text * -> _space_pos `x -> -> # *U _text `i `x * -> -> 1 `i `x -> -> # *U + _text * -> _space_pos `x -> -> # *U _text `i `x `i `x -> -> 16 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
-"129
-[; ;Main.c: 129:             _delay((unsigned long)((500)*(31000/4000.0)));
+[; ;Main.c: 127:             _delay((unsigned long)((500)*(31000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 31000 `i `d .4000.0 `ul ]
+"128
+[; ;Main.c: 128:             lcd_clear_line(0);
+[e ( _lcd_clear_line (1 -> -> 0 `i `uc ]
+"129
+[; ;Main.c: 129:             lcd_print(text + space_pos + 1, 16, 0, 0);
+[e ( _lcd_print (4 , , , + + _text * -> _space_pos `x -> -> # *U _text `i `x * -> -> 1 `i `x -> -> # *U + _text * -> _space_pos `x -> -> # *U _text `i `x `i `x -> -> 16 `i `uc -> -> 0 `i `uc -> -> 0 `i `uc ]
 "130
-[; ;Main.c: 130:         }
+[; ;Main.c: 130:             _delay((unsigned long)((500)*(31000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 31000 `i `d .4000.0 `ul ]
+"131
+[; ;Main.c: 131:         }
 }
 [e :U 107 ]
-"131
-[; ;Main.c: 131:         _delay((unsigned long)((1000)*(31000/4000.0)));
+"132
+[; ;Main.c: 132:         _delay((unsigned long)((1000)*(31000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 31000 `i `d .4000.0 `ul ]
-"134
-[; ;Main.c: 134:     }
+"135
+[; ;Main.c: 135:     }
 }
 [e :U 94 ]
 [e $U 95  ]
 [e :U 96 ]
-"135
-[; ;Main.c: 135: }
+"136
+[; ;Main.c: 136: }
 [e :UE 88 ]
 }
 [v $root$_testing `(v ~T0 @X0 0 e ]
-"137
-[; ;Main.c: 137: void __attribute__((picinterrupt(("")))) testing(void)
-[v _testing `(v ~T1 @X0 1 ef ]
 "138
-[; ;Main.c: 138: {
+[; ;Main.c: 138: void __attribute__((picinterrupt(("")))) testing(void)
+[v _testing `(v ~T1 @X0 1 ef ]
+"139
+[; ;Main.c: 139: {
 {
 [e :U _testing ]
 [f ]
-"139
-[; ;Main.c: 139:     if (INT0IF == 1)
-[e $ ! == -> _INT0IF `i -> 1 `i 109  ]
 "140
-[; ;Main.c: 140:     {
-{
+[; ;Main.c: 140:     if (INT0IF == 1)
+[e $ ! == -> _INT0IF `i -> 1 `i 109  ]
 "141
-[; ;Main.c: 141:         if (asleep)
-[e $ ! != -> _asleep `i -> 0 `i 110  ]
-"142
-[; ;Main.c: 142:         {
+[; ;Main.c: 141:     {
 {
+"142
+[; ;Main.c: 142:         if (asleep)
+[e $ ! != -> _asleep `i -> 0 `i 110  ]
 "143
-[; ;Main.c: 143:             lcd_cmd(0x0c);
-[e ( _lcd_cmd (1 -> -> 12 `i `uc ]
+[; ;Main.c: 143:         {
+{
 "144
-[; ;Main.c: 144:             lcd_clear_all();
-[e ( _lcd_clear_all ..  ]
+[; ;Main.c: 144:             RB3 = 1;
+[e = _RB3 -> -> 1 `i `b ]
 "145
-[; ;Main.c: 145:             asleep = 0;
-[e = _asleep -> -> 0 `i `uc ]
+[; ;Main.c: 145:             lcd_cmd(0x0c);
+[e ( _lcd_cmd (1 -> -> 12 `i `uc ]
 "146
-[; ;Main.c: 146:         }
+[; ;Main.c: 146:             lcd_clear_all();
+[e ( _lcd_clear_all ..  ]
+"147
+[; ;Main.c: 147:             asleep = 0;
+[e = _asleep -> -> 0 `i `uc ]
+"148
+[; ;Main.c: 148:         }
 }
 [e $U 111  ]
-"147
-[; ;Main.c: 147:         else
+"149
+[; ;Main.c: 149:         else
 [e :U 110 ]
-"148
-[; ;Main.c: 148:             btn_pressed = 1;
+"150
+[; ;Main.c: 150:             btn_pressed = 1;
 [e = _btn_pressed -> -> 1 `i `uc ]
 [e :U 111 ]
-"149
-[; ;Main.c: 149:         TMR0 = 0;
-[e = _TMR0 -> -> 0 `i `uc ]
-"150
-[; ;Main.c: 150:         TMR1 = 0;
-[e = _TMR1 -> -> 0 `i `us ]
 "151
-[; ;Main.c: 151:         INT0IF = 0;
-[e = _INT0IF -> -> 0 `i `b ]
+[; ;Main.c: 151:         TMR0 = 0;
+[e = _TMR0 -> -> 0 `i `uc ]
 "152
-[; ;Main.c: 152:     }
+[; ;Main.c: 152:         TMR1 = 0;
+[e = _TMR1 -> -> 0 `i `us ]
+"153
+[; ;Main.c: 153:         INT0IF = 0;
+[e = _INT0IF -> -> 0 `i `b ]
+"154
+[; ;Main.c: 154:     }
 }
 [e $U 112  ]
-"153
-[; ;Main.c: 153:     else if (TMR0IF)
+"155
+[; ;Main.c: 155:     else if (TMR0IF)
 [e :U 109 ]
 [e $ ! _TMR0IF 113  ]
-"154
-[; ;Main.c: 154:     {
-{
-"155
-[; ;Main.c: 155:         asleep = 1;
-[e = _asleep -> -> 1 `i `uc ]
 "156
-[; ;Main.c: 156:         TMR0IF = 0;
-[e = _TMR0IF -> -> 0 `i `b ]
+[; ;Main.c: 156:     {
+{
 "157
-[; ;Main.c: 157:     }
+[; ;Main.c: 157:         asleep = 1;
+[e = _asleep -> -> 1 `i `uc ]
+"158
+[; ;Main.c: 158:         TMR0IF = 0;
+[e = _TMR0IF -> -> 0 `i `b ]
+"159
+[; ;Main.c: 159:     }
 }
 [e :U 113 ]
 [e :U 112 ]
-"158
-[; ;Main.c: 158: }
+"160
+[; ;Main.c: 160: }
 [e :UE 108 ]
 }
-"160
-[; ;Main.c: 160: char* itoa(int x)
+"162
+[; ;Main.c: 162: char* itoa(int x)
 [v _itoa `(*uc ~T0 @X0 1 ef1`i ]
-"161
-[; ;Main.c: 161: {
+"163
+[; ;Main.c: 163: {
 {
 [e :U _itoa ]
-"160
-[; ;Main.c: 160: char* itoa(int x)
-[v _x `i ~T0 @X0 1 r1 ]
-"161
-[; ;Main.c: 161: {
-[f ]
 "162
-[; ;Main.c: 162:     int original = x;
+[; ;Main.c: 162: char* itoa(int x)
+[v _x `i ~T0 @X0 1 r1 ]
+"163
+[; ;Main.c: 163: {
+[f ]
+"164
+[; ;Main.c: 164:     int original = x;
 [v _original `i ~T0 @X0 1 a ]
 [e = _original _x ]
-"163
-[; ;Main.c: 163:     char buffer[8];
-[v _buffer `uc ~T0 @X0 -> 8 `i a ]
 "165
-[; ;Main.c: 165:     int c = sizeof (buffer) - 1;
+[; ;Main.c: 165:     char buffer[8];
+[v _buffer `uc ~T0 @X0 -> 8 `i a ]
+"167
+[; ;Main.c: 167:     int c = sizeof (buffer) - 1;
 [v _c `i ~T0 @X0 1 a ]
 [e = _c -> - -> # _buffer `ui -> -> 1 `i `ui `i ]
-"167
-[; ;Main.c: 167:     buffer[c] = 0;
-[e = *U + &U _buffer * -> -> _c `ui `ux -> -> # *U &U _buffer `ui `ux -> -> 0 `i `uc ]
 "169
-[; ;Main.c: 169:     if (x < 0)
+[; ;Main.c: 169:     buffer[c] = 0;
+[e = *U + &U _buffer * -> -> _c `ui `ux -> -> # *U &U _buffer `ui `ux -> -> 0 `i `uc ]
+"171
+[; ;Main.c: 171:     if (x < 0)
 [e $ ! < _x -> 0 `i 115  ]
-"170
-[; ;Main.c: 170:         x = -x;
+"172
+[; ;Main.c: 172:         x = -x;
 [e = _x -U _x ]
 [e :U 115 ]
-"172
-[; ;Main.c: 172:     do
-[e :U 118 ]
-"173
-[; ;Main.c: 173:     {
-{
 "174
-[; ;Main.c: 174:         buffer[--c] = (x % 10) + '0';
-[e = *U + &U _buffer * -> -> =- _c -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux -> + -> % _x -> 10 `i `ui -> 48 `ui `uc ]
+[; ;Main.c: 174:     do
+[e :U 118 ]
 "175
-[; ;Main.c: 175:         x /= 10;
-[e =/ _x -> 10 `i ]
+[; ;Main.c: 175:     {
+{
 "176
-[; ;Main.c: 176:     }
+[; ;Main.c: 176:         buffer[--c] = (x % 10) + '0';
+[e = *U + &U _buffer * -> -> =- _c -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux -> + -> % _x -> 10 `i `ui -> 48 `ui `uc ]
+"177
+[; ;Main.c: 177:         x /= 10;
+[e =/ _x -> 10 `i ]
+"178
+[; ;Main.c: 178:     }
 }
 [e $ != _x -> 0 `i 118  ]
 [e :U 117 ]
-"179
-[; ;Main.c: 179:     if (original < 0)
+"181
+[; ;Main.c: 181:     if (original < 0)
 [e $ ! < _original -> 0 `i 119  ]
-"180
-[; ;Main.c: 180:         buffer[--c] = '-';
+"182
+[; ;Main.c: 182:         buffer[--c] = '-';
 [e = *U + &U _buffer * -> -> =- _c -> 1 `i `ui `ux -> -> # *U &U _buffer `ui `ux -> -> 45 `ui `uc ]
 [e :U 119 ]
-"181
-[; ;Main.c: 181:     return &buffer[c];
+"183
+[; ;Main.c: 183:     return &buffer[c];
 [e ) &U *U + &U _buffer * -> -> _c `ui `ux -> -> # *U &U _buffer `ui `ux ]
 [e $UE 114  ]
-"182
-[; ;Main.c: 182: }
+"184
+[; ;Main.c: 184: }
 [e :UE 114 ]
 }
-"184
-[; ;Main.c: 184: char random(void)
+"186
+[; ;Main.c: 186: char random(void)
 [v _random `(uc ~T0 @X0 1 ef ]
-"185
-[; ;Main.c: 185: {
+"187
+[; ;Main.c: 187: {
 {
 [e :U _random ]
 [f ]
-"186
-[; ;Main.c: 186:     static char rand;
+"188
+[; ;Main.c: 188:     static char rand;
 [v F810 `uc ~T0 @X0 1 s rand ]
-"187
-[; ;Main.c: 187:     static char count = 0;
+"189
+[; ;Main.c: 189:     static char count = 0;
 [v F811 `uc ~T0 @X0 1 s count ]
 [i F811
 -> -> 0 `i `uc
 ]
-"188
-[; ;Main.c: 188:     char original = rand;
+"190
+[; ;Main.c: 190:     char original = rand;
 [v _original `uc ~T0 @X0 1 a ]
 [e = _original F810 ]
-"189
-[; ;Main.c: 189:     char rbit = 0;
+"191
+[; ;Main.c: 191:     char rbit = 0;
 [v _rbit `uc ~T0 @X0 1 a ]
 [e = _rbit -> -> 0 `i `uc ]
-"191
-[; ;Main.c: 191:     if (count == 0)
-[e $ ! == -> F811 `i -> 0 `i 121  ]
-"192
-[; ;Main.c: 192:     {
-{
 "193
-[; ;Main.c: 193:         while (RA7 == 0)
-[e $U 122  ]
-[e :U 123 ]
+[; ;Main.c: 193:     if (count == 0)
+[e $ ! == -> F811 `i -> 0 `i 121  ]
 "194
-[; ;Main.c: 194:         {
+[; ;Main.c: 194:     {
 {
 "195
-[; ;Main.c: 195:         }
+[; ;Main.c: 195:         while (RA7 == 0)
+[e $U 122  ]
+[e :U 123 ]
+"196
+[; ;Main.c: 196:         {
+{
+"197
+[; ;Main.c: 197:         }
 }
 [e :U 122 ]
-"193
-[; ;Main.c: 193:         while (RA7 == 0)
+"195
+[; ;Main.c: 195:         while (RA7 == 0)
 [e $ == -> _RA7 `i -> 0 `i 123  ]
 [e :U 124 ]
-"196
-[; ;Main.c: 196:         count = 1;
-[e = F811 -> -> 1 `i `uc ]
-"197
-[; ;Main.c: 197:         rand = TMR0;
-[e = F810 -> _TMR0 `uc ]
 "198
-[; ;Main.c: 198:         TMR0 = 0;
-[e = _TMR0 -> -> 0 `i `uc ]
+[; ;Main.c: 198:         count = 1;
+[e = F811 -> -> 1 `i `uc ]
 "199
-[; ;Main.c: 199:         TMR0IE = 1;
-[e = _TMR0IE -> -> 1 `i `b ]
+[; ;Main.c: 199:         rand = TMR0;
+[e = F810 -> _TMR0 `uc ]
 "200
-[; ;Main.c: 200:         return rand;
+[; ;Main.c: 200:         TMR0 = 0;
+[e = _TMR0 -> -> 0 `i `uc ]
+"201
+[; ;Main.c: 201:         TMR0IE = 1;
+[e = _TMR0IE -> -> 1 `i `b ]
+"202
+[; ;Main.c: 202:         return rand;
 [e ) F810 ]
 [e $UE 120  ]
-"201
-[; ;Main.c: 201:     }
+"203
+[; ;Main.c: 203:     }
 }
 [e :U 121 ]
-"203
-[; ;Main.c: 203:     original &= 180;
+"205
+[; ;Main.c: 205:     original &= 180;
 [e =& _original -> -> 180 `i `uc ]
-"204
-[; ;Main.c: 204:     while (original)
+"206
+[; ;Main.c: 206:     while (original)
 [e $U 125  ]
 [e :U 126 ]
-"205
-[; ;Main.c: 205:     {
-{
-"206
-[; ;Main.c: 206:         rbit ^= (original & 1);
-[e =^ _rbit -> & -> _original `i -> 1 `i `uc ]
 "207
-[; ;Main.c: 207:         original >>= 1;
-[e =>> _original -> -> 1 `i `uc ]
+[; ;Main.c: 207:     {
+{
 "208
-[; ;Main.c: 208:         original &= (~(1 << 7));
-[e =& _original -> ~ << -> 1 `i -> 7 `i `uc ]
+[; ;Main.c: 208:         rbit ^= (original & 1);
+[e =^ _rbit -> & -> _original `i -> 1 `i `uc ]
 "209
-[; ;Main.c: 209:     }
+[; ;Main.c: 209:         original >>= 1;
+[e =>> _original -> -> 1 `i `uc ]
+"210
+[; ;Main.c: 210:         original &= (~(1 << 7));
+[e =& _original -> ~ << -> 1 `i -> 7 `i `uc ]
+"211
+[; ;Main.c: 211:     }
 }
 [e :U 125 ]
-"204
-[; ;Main.c: 204:     while (original)
+"206
+[; ;Main.c: 206:     while (original)
 [e $ != -> _original `i -> 0 `i 126  ]
 [e :U 127 ]
-"210
-[; ;Main.c: 210:     rand <<= 1;
-[e =<< F810 -> -> 1 `i `uc ]
-"211
-[; ;Main.c: 211:     rand |= rbit;
-[e =| F810 -> _rbit `uc ]
 "212
-[; ;Main.c: 212:     return rand;
+[; ;Main.c: 212:     rand <<= 1;
+[e =<< F810 -> -> 1 `i `uc ]
+"213
+[; ;Main.c: 213:     rand |= rbit;
+[e =| F810 -> _rbit `uc ]
+"214
+[; ;Main.c: 214:     return rand;
 [e ) F810 ]
 [e $UE 120  ]
-"213
-[; ;Main.c: 213: }
+"215
+[; ;Main.c: 215: }
 [e :UE 120 ]
 }
-"215
-[; ;Main.c: 215: unsigned char strlen(unsigned char string[])
+"217
+[; ;Main.c: 217: unsigned char strlen(unsigned char string[])
 [v _strlen `(uc ~T0 @X0 1 ef1`*uc ]
-"216
-[; ;Main.c: 216: {
+"218
+[; ;Main.c: 218: {
 {
 [e :U _strlen ]
-"215
-[; ;Main.c: 215: unsigned char strlen(unsigned char string[])
-[v _string `*uc ~T0 @X0 1 r1 ]
-"216
-[; ;Main.c: 216: {
-[f ]
 "217
-[; ;Main.c: 217:     int i = 0;
+[; ;Main.c: 217: unsigned char strlen(unsigned char string[])
+[v _string `*uc ~T0 @X0 1 r1 ]
+"218
+[; ;Main.c: 218: {
+[f ]
+"219
+[; ;Main.c: 219:     int i = 0;
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-"218
-[; ;Main.c: 218:     unsigned char result = 0;
+"220
+[; ;Main.c: 220:     unsigned char result = 0;
 [v _result `uc ~T0 @X0 1 a ]
 [e = _result -> -> 0 `i `uc ]
-"219
-[; ;Main.c: 219:     while (string[i] != 0)
+"221
+[; ;Main.c: 221:     while (string[i] != 0)
 [e $U 129  ]
 [e :U 130 ]
-"220
-[; ;Main.c: 220:     {
-{
-"221
-[; ;Main.c: 221:         i++;
-[e ++ _i -> 1 `i ]
 "222
-[; ;Main.c: 222:         result++;
-[e ++ _result -> -> 1 `i `uc ]
+[; ;Main.c: 222:     {
+{
 "223
-[; ;Main.c: 223:     }
+[; ;Main.c: 223:         i++;
+[e ++ _i -> 1 `i ]
+"224
+[; ;Main.c: 224:         result++;
+[e ++ _result -> -> 1 `i `uc ]
+"225
+[; ;Main.c: 225:     }
 }
 [e :U 129 ]
-"219
-[; ;Main.c: 219:     while (string[i] != 0)
+"221
+[; ;Main.c: 221:     while (string[i] != 0)
 [e $ != -> *U + _string * -> _i `x -> -> # *U _string `i `x `i -> 0 `i 130  ]
 [e :U 131 ]
-"224
-[; ;Main.c: 224:     return result;
+"226
+[; ;Main.c: 226:     return result;
 [e ) _result ]
 [e $UE 128  ]
-"225
-[; ;Main.c: 225: }
+"227
+[; ;Main.c: 227: }
 [e :UE 128 ]
 }
 [a 1C 115 108 101 101 112 32 116 105 109 101 33 0 ]

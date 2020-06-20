@@ -1596,7 +1596,7 @@ void main()
     TRISB = 0x01;
     PORTA = 0x00;
     PORTB = 0x00;
-
+    RB3 = 1;
     INT0IF = 0;
     INT0IE = 1;
     T0CS = 0;
@@ -1628,6 +1628,7 @@ void main()
             _delay((unsigned long)((500)*(31000/4000.0)));
             lcd_cmd(0x08);
             btn_pressed = 0;
+            RB3 = 0;
             __asm("sleep");
             print = 1;
         }
@@ -1659,7 +1660,7 @@ void main()
         if (long_text)
         {
             lcd_print(text, space_pos, 0, 0);
-            _delay((unsigned long)((300)*(31000/4000.0)));
+            _delay((unsigned long)((500)*(31000/4000.0)));
             lcd_clear_line(0);
             lcd_print(text + space_pos + 1, 16, 0, 0);
             _delay((unsigned long)((500)*(31000/4000.0)));
@@ -1676,6 +1677,7 @@ void __attribute__((picinterrupt(("")))) testing(void)
     {
         if (asleep)
         {
+            RB3 = 1;
             lcd_cmd(0x0c);
             lcd_clear_all();
             asleep = 0;

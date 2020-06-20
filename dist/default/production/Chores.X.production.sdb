@@ -38,11 +38,11 @@
 [v i1_enable enable `(v  1 e 1 0 ]
 "57 D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 [v _main main `(v  1 e 1 0 ]
-"137
+"138
 [v _testing testing `II(v  1 e 1 0 ]
-"184
+"186
 [v _random random `(uc  1 e 1 0 ]
-"215
+"217
 [v _strlen strlen `(uc  1 e 1 0 ]
 "59 D:/Microchip/xc8/v2.05/pic/include\pic16f88.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -76,6 +76,8 @@
 [v _RB1 RB1 `VEb  1 e 0 @49 ]
 "2419
 [v _RB2 RB2 `VEb  1 e 0 @50 ]
+"2422
+[v _RB3 RB3 `VEb  1 e 0 @51 ]
 "2530
 [v _T0CS T0CS `VEb  1 e 0 @1037 ]
 "2557
@@ -105,31 +107,31 @@
 "57
 [v _main main `(v  1 e 1 0 ]
 {
-"135
+"136
 } 0
-"215
+"217
 [v _strlen strlen `(uc  1 e 1 0 ]
 {
-"217
+"219
 [v strlen@i i `i  1 a 2 3 ]
-"218
+"220
 [v strlen@result result `uc  1 a 1 5 ]
-"215
+"217
 [v strlen@string string `*.25uc  1 p 2 0 ]
-"225
+"227
 } 0
-"184
+"186
 [v _random random `(uc  1 e 1 0 ]
 {
-"188
+"190
 [v random@original original `uc  1 a 1 2 ]
-"189
+"191
 [v random@rbit rbit `uc  1 a 1 1 ]
-"186
+"188
 [v random@rand rand `uc  1 s 1 rand ]
-"187
+"189
 [v random@count count `uc  1 s 1 count ]
-"213
+"215
 } 0
 "13 D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 [v _lcd_print lcd_print `(v  1 e 1 0 ]
@@ -222,10 +224,10 @@
 [v ___awmod@dividend dividend `i  1 p 2 5 ]
 "34
 } 0
-"137 D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+"138 D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 [v _testing testing `II(v  1 e 1 0 ]
 {
-"158
+"160
 } 0
 "27 D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 [v i1_lcd_clear_all lcd_clear_all `(v  1 e 1 0 ]

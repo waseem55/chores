@@ -57,10 +57,10 @@ unsigned char strlen(unsigned char string[]);
 void main()
 {
     TRISA = 0xc0;
-    TRISB = 0x01;
+    TRISB = 0x01; // RB3 is used to control LCD lighting
     PORTA = 0x00;
     PORTB = 0x00;
-
+    RB3 = 1; // Turn LCD light on at first
     INT0IF = 0; // Clear RB0 interrupt flag
     INT0IE = 1; // Enable RB0 interrupt
     T0CS = 0; // Setting timer0 source to internal clock
@@ -92,6 +92,7 @@ void main()
             __delay_ms(500);
             lcd_cmd(0x08); // Turn LCD off
             btn_pressed = 0;
+            RB3 = 0;
             SLEEP();
             print = 1;
         }
@@ -123,7 +124,7 @@ void main()
         if (long_text)
         {
             lcd_print(text, space_pos, 0, 0);
-            __delay_ms(300);
+            __delay_ms(500);
             lcd_clear_line(0);
             lcd_print(text + space_pos + 1, 16, 0, 0);
             __delay_ms(500);
@@ -140,6 +141,7 @@ void __interrupt() testing(void)
     {
         if (asleep)
         {
+            RB3 = 1;
             lcd_cmd(0x0c); // Turn LCD on
             lcd_clear_all();
             asleep = 0;

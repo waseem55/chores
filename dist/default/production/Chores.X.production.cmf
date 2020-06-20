@@ -11,35 +11,35 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.o
+$C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 B B 2 2
 config CONFIG 0 2007 2007 2 2
 $dist/default/production\Chores.X.production.o
 cinit CODE 0 D D 1B 2
-text1 CODE 0 57C 57C 20 2
+text1 CODE 0 57D 57D 20 2
 text2 CODE 0 4E3 4E3 2D 2
 text3 CODE 0 418 418 39 2
 text4 CODE 0 376 376 55 2
 text5 CODE 0 484 484 30 2
-text6 CODE 0 55A 55A 22 2
-text7 CODE 0 5BD 5BD C 2
+text6 CODE 0 55B 55B 22 2
+text7 CODE 0 5BE 5BE C 2
 text8 CODE 0 451 451 33 2
-text9 CODE 0 5AF 5AF E 2
-text10 CODE 0 537 537 23 2
-text11 CODE 0 59C 59C 13 2
+text9 CODE 0 5B0 5B0 E 2
+text10 CODE 0 538 538 23 2
+text11 CODE 0 59D 59D 13 2
 text12 CODE 0 3CB 3CB 4D 2
-text13 CODE 0 510 510 27 2
-text14 CODE 0 5D5 5D5 A 2
+text13 CODE 0 510 510 28 2
+text14 CODE 0 5D6 5D6 A 2
 text15 CODE 0 4B4 4B4 2F 2
-text16 CODE 0 5C9 5C9 C 2
-maintext CODE 0 28 28 1BF 2
+text16 CODE 0 5CA 5CA C 2
+maintext CODE 0 28 28 1C0 2
 cstackCOMMON COMMON 1 70 70 7 1
 cstackBANK0 BANK0 1 20 20 14 1
 intentry CODE 0 4 4 7 2
 bssBANK0 BANK0 1 34 34 A 1
 stringtext STRCODE 0 200 200 176 2
-idataBANK0 CODE 0 5DF 5DF 3 2
+idataBANK0 CODE 0 5E0 5E0 3 2
 dataBANK0 BANK0 1 3E 3E 3 1
 bssCOMMON COMMON 1 77 77 3 1
 # %UNUSED Section
@@ -57,16 +57,16 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 2-3 2
-CONST 1E7-1FF 2
-CONST 5E2-FFF 2
+CONST 1E8-1FF 2
+CONST 5E3-FFF 2
 ENTRY 2-3 2
-ENTRY 1E7-1FF 2
-ENTRY 5E2-FFF 2
+ENTRY 1E8-1FF 2
+ENTRY 5E3-FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 2-3 2
-CODE 1E7-1FF 2
-CODE 5E2-FFF 2
+CODE 1E8-1FF 2
+CODE 5E3-FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -74,11 +74,11 @@ SFR3 180-18F 1
 COMMON 7A-7D 1
 EEDATA 2100-21FF 2
 STRCODE 2-3 2
-STRCODE 1E7-1FF 2
-STRCODE 5E2-FFF 2
+STRCODE 1E8-1FF 2
+STRCODE 5E3-FFF 2
 STRING 2-3 2
-STRING 1E7-1FF 2
-STRING 5E2-FFF 2
+STRING 1E8-1FF 2
+STRING 5E3-FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -93,36 +93,36 @@ STRING 5E2-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Chores.X.production.o
-D cinit CODE >927:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-D cinit CODE >930:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-D cinit CODE >986:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-10 cinit CODE >987:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-11 cinit CODE >988:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-14 cinit CODE >989:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-15 cinit CODE >990:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-17 cinit CODE >991:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-18 cinit CODE >995:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-19 cinit CODE >996:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-1A cinit CODE >997:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-1B cinit CODE >998:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-1C cinit CODE >999:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-1D cinit CODE >1000:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-1E cinit CODE >1001:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-1F cinit CODE >1002:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-20 cinit CODE >1003:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-21 cinit CODE >1004:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-22 cinit CODE >1007:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-23 cinit CODE >1008:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-24 cinit CODE >1009:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-25 cinit CODE >1015:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-25 cinit CODE >1017:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-26 cinit CODE >1018:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
-4 intentry CODE >137:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-5C9 text16 CODE >106:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5C9 text16 CODE >108:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5CC text16 CODE >110:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5D1 text16 CODE >112:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5D4 text16 CODE >113:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+D cinit CODE >929:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+D cinit CODE >932:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+D cinit CODE >988:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+10 cinit CODE >989:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+11 cinit CODE >990:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+14 cinit CODE >991:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+15 cinit CODE >992:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+17 cinit CODE >993:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+18 cinit CODE >997:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+19 cinit CODE >998:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+1A cinit CODE >999:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+1B cinit CODE >1000:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+1C cinit CODE >1001:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+1D cinit CODE >1002:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+1E cinit CODE >1003:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+1F cinit CODE >1004:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+20 cinit CODE >1005:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+21 cinit CODE >1006:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+22 cinit CODE >1009:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+23 cinit CODE >1010:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+24 cinit CODE >1011:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+25 cinit CODE >1017:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+25 cinit CODE >1019:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+26 cinit CODE >1020:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.
+4 intentry CODE >138:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+5CA text16 CODE >106:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5CA text16 CODE >108:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5CD text16 CODE >110:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5D2 text16 CODE >112:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5D5 text16 CODE >113:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 4B4 text15 CODE >74:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 4B5 text15 CODE >77:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 4B8 text15 CODE >78:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
@@ -132,27 +132,28 @@ D cinit CODE >986:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
 4DA text15 CODE >86:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 4DD text15 CODE >87:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 4E2 text15 CODE >88:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5D5 text14 CODE >27:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5D5 text14 CODE >29:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5D9 text14 CODE >30:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5DE text14 CODE >31:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-510 text13 CODE >137:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-510 text13 CODE >139:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-512 text13 CODE >141:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-517 text13 CODE >143:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-51B text13 CODE >144:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-51E text13 CODE >145:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-521 text13 CODE >146:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-522 text13 CODE >147:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+5D6 text14 CODE >27:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5D6 text14 CODE >29:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5DA text14 CODE >30:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5DF text14 CODE >31:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+510 text13 CODE >138:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+510 text13 CODE >140:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+512 text13 CODE >142:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+517 text13 CODE >144:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+518 text13 CODE >145:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+51C text13 CODE >146:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+51F text13 CODE >147:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 522 text13 CODE >148:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-524 text13 CODE >149:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-525 text13 CODE >150:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-527 text13 CODE >151:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-528 text13 CODE >152:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-529 text13 CODE >153:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-52B text13 CODE >155:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-52F text13 CODE >156:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+523 text13 CODE >149:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+523 text13 CODE >150:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+525 text13 CODE >151:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+526 text13 CODE >152:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+528 text13 CODE >153:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+529 text13 CODE >154:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+52A text13 CODE >155:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+52C text13 CODE >157:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 530 text13 CODE >158:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+531 text13 CODE >160:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 3CB text12 CODE >5:D:\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
 3CB text12 CODE >12:D:\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
 3CE text12 CODE >13:D:\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
@@ -174,29 +175,29 @@ D cinit CODE >986:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
 40E text12 CODE >32:D:\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
 413 text12 CODE >33:D:\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
 417 text12 CODE >34:D:\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-59C text11 CODE >4:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
-59F text11 CODE >6:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
-5A0 text11 CODE >43:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
-5A2 text11 CODE >44:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
-5A6 text11 CODE >45:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
-5A8 text11 CODE >46:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
-5AA text11 CODE >47:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
-5AD text11 CODE >50:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
-5AE text11 CODE >51:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
-537 text10 CODE >15:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-537 text10 CODE >43:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-53B text10 CODE >45:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-53D text10 CODE >46:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-543 text10 CODE >47:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-54A text10 CODE >48:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-551 text10 CODE >49:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-555 text10 CODE >52:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-559 text10 CODE >53:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-5AF text9 CODE >106:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5AF text9 CODE >108:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5B2 text9 CODE >110:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5B9 text9 CODE >112:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5BC text9 CODE >113:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+59D text11 CODE >4:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+5A0 text11 CODE >6:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+5A1 text11 CODE >43:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+5A3 text11 CODE >44:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+5A7 text11 CODE >45:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+5A9 text11 CODE >46:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+5AB text11 CODE >47:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+5AE text11 CODE >50:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+5AF text11 CODE >51:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+538 text10 CODE >15:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+538 text10 CODE >43:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+53C text10 CODE >45:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+53E text10 CODE >46:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+544 text10 CODE >47:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+54B text10 CODE >48:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+552 text10 CODE >49:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+556 text10 CODE >52:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+55A text10 CODE >53:D:\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+5B0 text9 CODE >106:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5B0 text9 CODE >108:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5B3 text9 CODE >110:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5BA text9 CODE >112:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5BD text9 CODE >113:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 451 text8 CODE >74:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 454 text8 CODE >77:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 455 text8 CODE >78:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
@@ -206,17 +207,17 @@ D cinit CODE >986:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
 479 text8 CODE >86:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 47C text8 CODE >87:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 483 text8 CODE >88:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5BD text7 CODE >27:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5BD text7 CODE >29:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5C1 text7 CODE >30:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-5C8 text7 CODE >31:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-55A text6 CODE >90:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-55D text6 CODE >93:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-55E text6 CODE >98:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-56D text6 CODE >99:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-570 text6 CODE >101:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-579 text6 CODE >102:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-57B text6 CODE >104:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5BE text7 CODE >27:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5BE text7 CODE >29:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5C2 text7 CODE >30:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+5C9 text7 CODE >31:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+55B text6 CODE >90:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+55E text6 CODE >93:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+55F text6 CODE >98:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+56E text6 CODE >99:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+571 text6 CODE >101:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+57A text6 CODE >102:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
+57C text6 CODE >104:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 484 text5 CODE >33:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 487 text5 CODE >36:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 495 text5 CODE >37:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
@@ -249,88 +250,90 @@ D cinit CODE >986:C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.
 446 text3 CODE >22:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 44E text3 CODE >23:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
 450 text3 CODE >20:D:\My Files\Chores Project\LED chip\Chores.X\LCD.c
-4E3 text2 CODE >184:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-4E3 text2 CODE >188:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-4E9 text2 CODE >189:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-4EA text2 CODE >191:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-4ED text2 CODE >193:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+4E3 text2 CODE >186:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+4E3 text2 CODE >190:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+4E9 text2 CODE >191:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+4EA text2 CODE >193:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 4ED text2 CODE >195:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-4EF text2 CODE >196:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-4F1 text2 CODE >197:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-4F5 text2 CODE >198:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-4F6 text2 CODE >199:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-4F7 text2 CODE >200:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-4F9 text2 CODE >203:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-4FA text2 CODE >208:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-4FD text2 CODE >204:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-500 text2 CODE >206:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-505 text2 CODE >207:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-507 text2 CODE >208:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-508 text2 CODE >204:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-509 text2 CODE >210:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-50B text2 CODE >211:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-57C text1 CODE >215:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-57C text1 CODE >217:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-580 text1 CODE >218:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-581 text1 CODE >219:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-58F text1 CODE >221:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-595 text1 CODE >222:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-599 text1 CODE >219:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-59A text1 CODE >224:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-59B text1 CODE >225:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+4ED text2 CODE >197:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+4EF text2 CODE >198:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+4F1 text2 CODE >199:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+4F5 text2 CODE >200:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+4F6 text2 CODE >201:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+4F7 text2 CODE >202:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+4F9 text2 CODE >205:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+4FA text2 CODE >210:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+4FD text2 CODE >206:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+500 text2 CODE >208:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+505 text2 CODE >209:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+507 text2 CODE >210:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+508 text2 CODE >206:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+509 text2 CODE >212:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+50B text2 CODE >213:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+57D text1 CODE >217:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+57D text1 CODE >219:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+581 text1 CODE >220:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+582 text1 CODE >221:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+590 text1 CODE >223:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+596 text1 CODE >224:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+59A text1 CODE >221:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+59B text1 CODE >226:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+59C text1 CODE >227:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 28 maintext CODE >57:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 28 maintext CODE >59:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 2C maintext CODE >60:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 2E maintext CODE >61:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 31 maintext CODE >62:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-32 maintext CODE >64:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-33 maintext CODE >65:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-34 maintext CODE >66:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-37 maintext CODE >67:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-38 maintext CODE >68:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-39 maintext CODE >69:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-3A maintext CODE >70:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-3B maintext CODE >71:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-3C maintext CODE >73:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-3D maintext CODE >76:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-40 maintext CODE >78:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-5A maintext CODE >79:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-84 maintext CODE >80:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-92 maintext CODE >82:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-AF maintext CODE >83:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-B1 maintext CODE >88:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-B6 maintext CODE >90:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-B9 maintext CODE >91:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-C8 maintext CODE >92:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-D2 maintext CODE >93:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-D6 maintext CODE >94:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-D9 maintext CODE >95:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-DA maintext CODE >96:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-DE maintext CODE >97:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-DF maintext CODE >98:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-E2 maintext CODE >100:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+32 maintext CODE >63:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+33 maintext CODE >64:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+34 maintext CODE >65:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+35 maintext CODE >66:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+38 maintext CODE >67:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+39 maintext CODE >68:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+3A maintext CODE >69:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+3B maintext CODE >70:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+3C maintext CODE >71:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+3D maintext CODE >73:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+3E maintext CODE >76:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+41 maintext CODE >78:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+5B maintext CODE >79:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+85 maintext CODE >80:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+93 maintext CODE >82:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+B0 maintext CODE >83:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+B2 maintext CODE >88:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+B7 maintext CODE >90:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+BA maintext CODE >91:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+C9 maintext CODE >92:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+D3 maintext CODE >93:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+D7 maintext CODE >94:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+DA maintext CODE >95:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+DB maintext CODE >96:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+DC maintext CODE >97:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+E0 maintext CODE >98:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+E1 maintext CODE >99:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 E4 maintext CODE >101:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-FC maintext CODE >102:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-126 maintext CODE >103:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-12B maintext CODE >104:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-139 maintext CODE >106:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-156 maintext CODE >107:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+E6 maintext CODE >102:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+FE maintext CODE >103:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+128 maintext CODE >104:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+12D maintext CODE >105:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+13B maintext CODE >107:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 158 maintext CODE >108:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-159 maintext CODE >111:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-15A maintext CODE >112:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-15E maintext CODE >114:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-15F maintext CODE >116:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-162 maintext CODE >118:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-165 maintext CODE >119:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-168 maintext CODE >120:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-175 maintext CODE >121:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-195 maintext CODE >123:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-19A maintext CODE >125:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-1A7 maintext CODE >126:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-1B2 maintext CODE >127:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-1B6 maintext CODE >128:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-1D1 maintext CODE >129:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
-1DB maintext CODE >131:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+15A maintext CODE >109:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+15B maintext CODE >112:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+15C maintext CODE >113:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+160 maintext CODE >115:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+161 maintext CODE >117:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+164 maintext CODE >119:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+167 maintext CODE >120:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+16A maintext CODE >121:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+177 maintext CODE >122:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+197 maintext CODE >124:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+19C maintext CODE >126:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+1A9 maintext CODE >127:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+1B3 maintext CODE >128:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+1B7 maintext CODE >129:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+1D2 maintext CODE >130:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
+1DC maintext CODE >132:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -344,7 +347,7 @@ FC maintext CODE >102:D:\My Files\Chores Project\LED chip\Chores.X\Main.c
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 1 0 ABS 0 - dist/default/production\Chores.X.production.o
-i1_lcd_clear_all BAA 0 CODE 0 text14 dist/default/production\Chores.X.production.o
+i1_lcd_clear_all BAC 0 CODE 0 text14 dist/default/production\Chores.X.production.o
 __LdataBANK0 0 0 ABS 0 dataBANK0 -
 __Hspace_0 2009 0 ABS 0 - -
 __Hspace_1 7A 0 ABS 0 - -
@@ -358,18 +361,18 @@ lcd_print@line 27 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.product
 lcd_print@size 26 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.production.o
 lcd_print@text 24 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.production.o
 __Lstringtext 0 0 ABS 0 stringtext -
-_lcd_clear_all B7A 0 CODE 0 text7 dist/default/production\Chores.X.production.o
+_lcd_clear_all B7C 0 CODE 0 text7 dist/default/production\Chores.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _T0CS 40D 0 ABS 0 - dist/default/production\Chores.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\Chores.X.production.o
 _TMR1 E 0 ABS 0 - dist/default/production\Chores.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.o
+___sp 0 0 STACK 2 stack C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.o
 _main 50 0 CODE 0 maintext dist/default/production\Chores.X.production.o
 _rand 36 0 BANK0 1 bssBANK0 dist/default/production\Chores.X.production.o
 _text 34 0 BANK0 1 bssBANK0 dist/default/production\Chores.X.production.o
 _user 3B 0 BANK0 1 bssBANK0 dist/default/production\Chores.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Chores.X.production.o
-start 16 0 CODE 0 init C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.o
+start 16 0 CODE 0 init C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\Chores.X.production.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\Chores.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Chores.X.production.o
@@ -379,12 +382,12 @@ __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __Hpowerup 0 0 CODE 0 powerup -
 ___awmod@sign 29 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.production.o
 __end_of_lcd_print 8A2 0 CODE 0 text3 dist/default/production\Chores.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.o
 __size_of_lcd_print 0 0 ABS 0 - dist/default/production\Chores.X.production.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 strlen@result 25 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.production.o
@@ -401,8 +404,8 @@ __size_of_lcd_clear_line 0 0 ABS 0 - dist/default/production\Chores.X.production
 __size_ofi1_lcd_cmd 0 0 ABS 0 - dist/default/production\Chores.X.production.o
 __end_of_lcd_cmd 908 0 CODE 0 text8 dist/default/production\Chores.X.production.o
 lcd_print@pos 28 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.production.o
-__end_of___bmul B5E 0 CODE 0 text11 dist/default/production\Chores.X.production.o
-__end_of___wmul AB4 0 CODE 0 text10 dist/default/production\Chores.X.production.o
+__end_of___bmul B60 0 CODE 0 text11 dist/default/production\Chores.X.production.o
+__end_of___wmul AB6 0 CODE 0 text10 dist/default/production\Chores.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 i1_lcd_cmd 968 0 CODE 0 text15 dist/default/production\Chores.X.production.o
 ___bmul@multiplier 23 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.production.o
@@ -411,12 +414,12 @@ __end_of___awmod 830 0 CODE 0 text12 dist/default/production\Chores.X.production
 __end_of_chores 6B8 0 STRCODE 0 stringtext dist/default/production\Chores.X.production.o
 _INT0IE 5C 0 ABS 0 - dist/default/production\Chores.X.production.o
 _INT0IF 59 0 ABS 0 - dist/default/production\Chores.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.o
-___stacklo 0 0 ABS 0 - C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.o
-__end_of_enable B7A 0 CODE 0 text9 dist/default/production\Chores.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.o
+___stacklo 0 0 ABS 0 - C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.o
+__end_of_enable B7C 0 CODE 0 text9 dist/default/production\Chores.X.production.o
 start_initialization 1A 0 CODE 0 cinit dist/default/production\Chores.X.production.o
 __CFG_FOSC$INTOSCIO 0 0 ABS 0 - dist/default/production\Chores.X.production.o
-__end_of_lcd_clear_all B92 0 CODE 0 text7 dist/default/production\Chores.X.production.o
+__end_of_lcd_clear_all B94 0 CODE 0 text7 dist/default/production\Chores.X.production.o
 _long_text 3A 0 BANK0 1 bssBANK0 dist/default/production\Chores.X.production.o
 __size_ofi1_enable 0 0 ABS 0 - dist/default/production\Chores.X.production.o
 lcd_clear_line@i 26 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.production.o
@@ -425,13 +428,13 @@ __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.product
 _TMR0IE 5D 0 ABS 0 - dist/default/production\Chores.X.production.o
 _TMR0IF 5A 0 ABS 0 - dist/default/production\Chores.X.production.o
 __end_of_random A20 0 CODE 0 text2 dist/default/production\Chores.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.o
+___int_sp 0 0 STACK 2 stack C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 50 0 CODE 0 cinit -
-__end_of_strlen B38 0 CODE 0 text1 dist/default/production\Chores.X.production.o
+__end_of_strlen B3A 0 CODE 0 text1 dist/default/production\Chores.X.production.o
 __Hidloc 0 0 IDLOC 0 idloc -
 __Hstack 0 0 STACK 2 stack -
 __stringbase 424 0 STRCODE 0 stringtext dist/default/production\Chores.X.production.o
@@ -450,7 +453,7 @@ __Lbank3 0 0 ABS 0 bank3 -
 __Lcinit 1A 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
 __Lstack 0 0 STACK 2 stack -
-i1_enable B92 0 CODE 0 text16 dist/default/production\Chores.X.production.o
+i1_enable B94 0 CODE 0 text16 dist/default/production\Chores.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 16 0 CODE 0 init -
@@ -467,8 +470,8 @@ __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
-___bmul B38 0 CODE 0 text11 dist/default/production\Chores.X.production.o
-___wmul A6E 0 CODE 0 text10 dist/default/production\Chores.X.production.o
+___bmul B3A 0 CODE 0 text11 dist/default/production\Chores.X.production.o
+___wmul A70 0 CODE 0 text10 dist/default/production\Chores.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\Chores.X.production.o
@@ -479,43 +482,44 @@ _PSA 40B 0 ABS 0 - dist/default/production\Chores.X.production.o
 _RA7 2F 0 ABS 0 - dist/default/production\Chores.X.production.o
 _RB1 31 0 ABS 0 - dist/default/production\Chores.X.production.o
 _RB2 32 0 ABS 0 - dist/default/production\Chores.X.production.o
+_RB3 33 0 ABS 0 - dist/default/production\Chores.X.production.o
 __S0 2009 0 ABS 0 - -
 __S1 7A 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-__end_ofi1_enable BAA 0 CODE 0 text16 dist/default/production\Chores.X.production.o
+__end_ofi1_enable BAC 0 CODE 0 text16 dist/default/production\Chores.X.production.o
 _asleep 3C 0 BANK0 1 bssBANK0 dist/default/production\Chores.X.production.o
 _space_pos 3E 0 BANK0 1 dataBANK0 dist/default/production\Chores.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\Chores.X.production.o
 _chores 424 0 STRCODE 0 stringtext dist/default/production\Chores.X.production.o
-_enable B5E 0 CODE 0 text9 dist/default/production\Chores.X.production.o
-_lcd_data AB4 0 CODE 0 text6 dist/default/production\Chores.X.production.o
+_enable B60 0 CODE 0 text9 dist/default/production\Chores.X.production.o
+_lcd_data AB6 0 CODE 0 text6 dist/default/production\Chores.X.production.o
 _lcd_init 6EC 0 CODE 0 text4 dist/default/production\Chores.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 __stringtab 400 0 STRCODE 0 stringtext dist/default/production\Chores.X.production.o
 _lcd_cmd 8A2 0 CODE 0 text8 dist/default/production\Chores.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\WASEE~1.LAP\AppData\Local\Temp\s87c.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\WASEE~1.LAP\AppData\Local\Temp\s5l0.o
 strlen@i 23 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.production.o
 random@rand 39 0 BANK0 1 bssBANK0 dist/default/production\Chores.X.production.o
 random@rbit 21 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.production.o
 __pdataBANK0 3E 0 BANK0 1 dataBANK0 dist/default/production\Chores.X.production.o
 __size_of___bmul 0 0 ABS 0 - dist/default/production\Chores.X.production.o
 __size_of___wmul 0 0 ABS 0 - dist/default/production\Chores.X.production.o
-__end_of_lcd_data AF8 0 CODE 0 text6 dist/default/production\Chores.X.production.o
+__end_of_lcd_data AFA 0 CODE 0 text6 dist/default/production\Chores.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __end_of_lcd_init 796 0 CODE 0 text4 dist/default/production\Chores.X.production.o
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\Chores.X.production.o
 ___awmod@counter 28 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.production.o
-__ptext10 A6E 0 CODE 0 text10 dist/default/production\Chores.X.production.o
-__ptext11 B38 0 CODE 0 text11 dist/default/production\Chores.X.production.o
+__ptext10 A70 0 CODE 0 text10 dist/default/production\Chores.X.production.o
+__ptext11 B3A 0 CODE 0 text11 dist/default/production\Chores.X.production.o
 __ptext12 796 0 CODE 0 text12 dist/default/production\Chores.X.production.o
 __ptext13 A20 0 CODE 0 text13 dist/default/production\Chores.X.production.o
-__ptext14 BAA 0 CODE 0 text14 dist/default/production\Chores.X.production.o
+__ptext14 BAC 0 CODE 0 text14 dist/default/production\Chores.X.production.o
 __ptext15 968 0 CODE 0 text15 dist/default/production\Chores.X.production.o
-__ptext16 B92 0 CODE 0 text16 dist/default/production\Chores.X.production.o
+__ptext16 B94 0 CODE 0 text16 dist/default/production\Chores.X.production.o
 ___awmod 796 0 CODE 0 text12 dist/default/production\Chores.X.production.o
 __pmaintext 50 0 CODE 0 maintext dist/default/production\Chores.X.production.o
-__end_of_testing A6E 0 CODE 0 text13 dist/default/production\Chores.X.production.o
+__end_of_testing A70 0 CODE 0 text13 dist/default/production\Chores.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\Chores.X.production.o
@@ -525,7 +529,7 @@ __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\Chores.X.production.o
 ___wmul@multiplier 2A 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.production.o
 _lcd_clear_line 908 0 CODE 0 text5 dist/default/production\Chores.X.production.o
 _random 9C6 0 CODE 0 text2 dist/default/production\Chores.X.production.o
-_strlen AF8 0 CODE 0 text1 dist/default/production\Chores.X.production.o
+_strlen AFA 0 CODE 0 text1 dist/default/production\Chores.X.production.o
 __end_of__stringtab 424 0 STRCODE 0 stringtext dist/default/production\Chores.X.production.o
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Chores.X.production.o
 __Lspace_0 0 0 ABS 0 - -
@@ -549,15 +553,15 @@ __end_of_lcd_clear_line 968 0 CODE 0 text5 dist/default/production\Chores.X.prod
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 ___awmod@dividend 25 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.production.o
 __size_of_strlen 0 0 ABS 0 - dist/default/production\Chores.X.production.o
-__ptext1 AF8 0 CODE 0 text1 dist/default/production\Chores.X.production.o
+__ptext1 AFA 0 CODE 0 text1 dist/default/production\Chores.X.production.o
 __ptext2 9C6 0 CODE 0 text2 dist/default/production\Chores.X.production.o
 __ptext3 830 0 CODE 0 text3 dist/default/production\Chores.X.production.o
 __ptext4 6EC 0 CODE 0 text4 dist/default/production\Chores.X.production.o
 __ptext5 908 0 CODE 0 text5 dist/default/production\Chores.X.production.o
-__ptext6 AB4 0 CODE 0 text6 dist/default/production\Chores.X.production.o
-__ptext7 B7A 0 CODE 0 text7 dist/default/production\Chores.X.production.o
+__ptext6 AB6 0 CODE 0 text6 dist/default/production\Chores.X.production.o
+__ptext7 B7C 0 CODE 0 text7 dist/default/production\Chores.X.production.o
 __ptext8 8A2 0 CODE 0 text8 dist/default/production\Chores.X.production.o
-__ptext9 B5E 0 CODE 0 text9 dist/default/production\Chores.X.production.o
+__ptext9 B60 0 CODE 0 text9 dist/default/production\Chores.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __pstringtext 400 0 STRCODE 0 stringtext dist/default/production\Chores.X.production.o
@@ -565,14 +569,14 @@ __Lreset_vec 0 0 CODE 0 reset_vec -
 __end_of__initialization 4A 0 CODE 0 cinit dist/default/production\Chores.X.production.o
 ___awmod@divisor 23 0 BANK0 1 cstackBANK0 dist/default/production\Chores.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__pidataBANK0 BBE 0 CODE 0 idataBANK0 dist/default/production\Chores.X.production.o
+__pidataBANK0 BC0 0 CODE 0 idataBANK0 dist/default/production\Chores.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 i1lcd_cmd@c 73 0 COMMON 1 cstackCOMMON dist/default/production\Chores.X.production.o
 _btn_pressed 3D 0 BANK0 1 bssBANK0 dist/default/production\Chores.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Chores.X.production.o
-__end_ofi1_lcd_clear_all BBE 0 CODE 0 text14 dist/default/production\Chores.X.production.o
+__end_ofi1_lcd_clear_all BC0 0 CODE 0 text14 dist/default/production\Chores.X.production.o
 __Hend_init 1A 0 CODE 0 end_init -
-__end_of_main 3CE 0 CODE 0 maintext dist/default/production\Chores.X.production.o
+__end_of_main 3D0 0 CODE 0 maintext dist/default/production\Chores.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\Chores.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Chores.X.production.o
 _TRISA 85 0 ABS 0 - dist/default/production\Chores.X.production.o
@@ -620,10 +624,10 @@ _testing A20 0 CODE 0 text13 dist/default/production\Chores.X.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text4 0 376 6EC 26C 2
+text4 0 376 6EC 26D 2
 cstackCOMMON 1 70 70 A 1
 cstackBANK0 1 20 20 21 1
-intentry 0 4 8 1E3 2
+intentry 0 4 8 1E4 2
 reset_vec 0 0 0 2 2
 stringtext 0 200 400 176 2
 config 0 2007 400E 2 2
